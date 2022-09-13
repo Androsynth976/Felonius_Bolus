@@ -2,7 +2,7 @@
  * @purpose  Gui Testing. This was inspired off of PilotRedSun's Video "Felonius Bolus", and impact.wav comes directly from the video.
  * @Date: 9.12.2022 04:03
  */
-package window;
+package feloniusBolus;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -21,7 +21,7 @@ public class FeloniusBolus extends JPanel implements Runnable, ActionListener  {
 	int vy = -5; // x vector direction for ball. attempts to randomize: 1
 	int radius = 25; // radius of ball.
 	Color randcolor = new Color(rnumber(0,255),rnumber(0,255),rnumber(0,255)); // new random color.
-	public Window() { // constructor
+	public FeloniusBolus() { // constructor
 		super(); // ?
 		this.setBackground(Color.gray); // test
 	}
@@ -110,7 +110,7 @@ public class FeloniusBolus extends JPanel implements Runnable, ActionListener  {
 	}
 	public static void main(String[] args) throws LineUnavailableException, IOException, UnsupportedAudioFileException {
 		System.out.println("RISE AND SHINE, MISTER FREEMAN");//hw
-		SwingUtilities.invokeLater(new Window());
+		SwingUtilities.invokeLater(new FeloniusBolus());
 		
 		
 	}
