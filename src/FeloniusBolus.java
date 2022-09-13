@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import javax.sound.sampled.*;
 
-public class Window extends JPanel implements Runnable, ActionListener  {
+public class FeloniusBolus extends JPanel implements Runnable, ActionListener  {
 	
 	int x = 400; // x coordinate for ball
 	int y = 300; // y coord for ball
@@ -90,12 +90,12 @@ public class Window extends JPanel implements Runnable, ActionListener  {
 	public void run() { //on run, i presume?
 		//this implements runnable..? 
 		ImageIcon icon = new ImageIcon(".//res//icon.png"); // initiate icon image for program to felonius bolus (refer to line 100 for completion.)
-		new Timer(10,this).start(); //need to keep a sense of time.
+		new Timer(10,this).start(); //need to keep a sense of time. have a timer going every 10 miliseconds
 		JFrame jeff = new JFrame("Felonius Bolus"); // In the beginning, there was Jeff. (define frame window, with name of program.)
 		jeff.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	// Jeff has to go to sleep when it is time for bed. (make sure program closes on quit.)
 		jeff.setResizable(false); // Jeff also was happy with his body size. (make sure you can not resize. messes with ball physics.)
 		jeff.setSize(new Dimension(800,600)); // This is how big Jeff was! A growing  (er. maybe not ) boy.
-		jeff.setVisible(true); //Jeff wanted people to see him.
+		jeff.setVisible(true); //Jeff wanted people to see him. (set window to be visible)
 		jeff.getGraphics(); //Jeff likes to pick his clothes. (initiate graphics.)
 		jeff.getContentPane().add(this); //this = JPanel, I presume.                 UNCERTAIN COMMENT.
 		jeff.setIconImage(icon.getImage()); // set icon image for program.
